@@ -55,4 +55,13 @@ var populateBlogTable = function () { return __awaiter(void 0, void 0, void 0, f
         return [2 /*return*/];
     });
 }); };
+// const populateBlogTable = async () => {
+//     data.forEach(async (el) => {
+//       const data = await query(
+//         "INSERT INTO blogposts (blog_date, blog_author, blog_title, blog_content) VALUES ($1, $2, $3, $4)",
+//         [el.blog_date, el.blog_author, el.blog_title, el.blog_content]
+//       );
+//       return data.rows;
+//     });
+//   };
 populateBlogTable();

@@ -9,7 +9,7 @@ const createBlogPostTable = () => {
 
 createBlogPostTable();
 
-// NOT NULL DEFAULT CURRENT_DATE
+// DATE NOT NULL DEFAULT CURRENT_DATE
 
 // const createBlogCommentsTable = ()=>{
 //     return query('CREATE TABLE IF NOT EXISTS blogcomments ()')
