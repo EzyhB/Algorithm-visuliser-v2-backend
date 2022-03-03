@@ -22,5 +22,7 @@ export default async function newPost(
     );
 
     res.json(data.rows);
+  } else {
+    res.status(500);
   }
 }
