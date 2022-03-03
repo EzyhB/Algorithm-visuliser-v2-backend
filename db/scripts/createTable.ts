@@ -3,7 +3,7 @@ import query from "..";
 
 const createBlogPostTable = () => {
   return query(
-    "CREATE TABLE IF NOT EXISTS blogposts (id serial PRIMARY KEY, blog_date DATE NOT NULL DEFAULT CURRENT_DATE, blog_author TEXT, blog_title TEXT, blog_content TEXT);"
+    "DROP TABLE IF EXISTS blogposts; CREATE TABLE IF NOT EXISTS blogposts (id serial PRIMARY KEY, blog_date timestamp default CURRENT_TIMESTAMP, blog_author TEXT, blog_title TEXT, blog_content TEXT);"
   );
 };
 
