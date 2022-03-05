@@ -45,7 +45,13 @@ var populateBlogTable = function () { return __awaiter(void 0, void 0, void 0, f
             var data;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, (0, __1["default"])("INSERT INTO blogposts (blog_author, blog_title, blog_content) VALUES ($1, $2, $3)", [el.blog_author, el.blog_title, el.blog_content])];
+                    case 0: return [4 /*yield*/, (0, __1["default"])("INSERT INTO blogposts (blog_image, blog_author, blog_title, blog_content, user_auth) VALUES ($1, $2, $3, $4, $5)", [
+                            el.blog_image,
+                            el.blog_author,
+                            el.blog_title,
+                            el.blog_content,
+                            el.user_auth,
+                        ])];
                     case 1:
                         data = _a.sent();
                         return [2 /*return*/, data.rows];
