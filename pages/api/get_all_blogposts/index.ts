@@ -20,7 +20,7 @@ export default async function handler(
   const { method } = req;
 
   if (method === "GET") {
-    const data = await query("SELECT * FROM blogposts");
+    const data = await query("SELECT * FROM blogposts ORDER BY id ASC");
     return res.json(data);
   }
 
