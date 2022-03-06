@@ -17,8 +17,14 @@ export default async function newPost(
 
   if (method === "POST") {
     const data = await query(
-      "INSERT INTO blogposts (blog_author, blog_title, blog_content) VALUES ($1, $2, $3);",
-      [el.blog_author, el.blog_title, el.blog_content]
+      "INSERT INTO blogposts (blog_image, blog_author, blog_title, blog_content, user_auth) VALUES ($1, $2, $3, $4, $5);",
+      [
+        el.blog_image,
+        el.blog_author,
+        el.blog_title,
+        el.blog_content,
+        el.user_auth,
+      ]
     );
 
     res.json(data.rows);
